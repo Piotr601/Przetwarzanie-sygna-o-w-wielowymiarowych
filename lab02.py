@@ -72,16 +72,15 @@ print(np.round(iinter_img[0:15,0:15],1))
 # x_s, y_s  = np.shape(rot_image2)
 # x = np.linspace(0, 8 * x_s, x_s)
 # y = np.linspace(0, 8 * y_s, y_s)
-
+#
 # x_new = np.arange(0, 8 * x_s, 1)
 # y_new = np.arange(0, 8 * y_s, 1)
-
-
+#
+#
 # def nearby(X_axis, Y_axis):
 #     x = np.abs(x-X_axis)
 #     y = np.abs(y-Y_axis)
-#     return rot_image[y, x]
-
+#     return y, x
 
 plt.tight_layout()
 plt.savefig("lab02")
