@@ -46,7 +46,7 @@ def noise(length):
     noise_sum = (noise_sum - np.min(noise_sum))
     noise_sum = noise_sum / np.max(noise_sum)
     return noise_sum
-
+    
 noise_50 = noise(50)
 ax[2,1].imshow(noise_50, cmap = 'binary')
 
@@ -66,8 +66,6 @@ ax[1,2].set_title('min: %i, max: %i' %(np.min(bit_8), np.max(bit_8)))
 ax[2,0].set_title("noised")
 ax[2,1].set_title("n=50")
 ax[2,2].set_title("n=1000")
-
-
 
 plt.tight_layout()
 plt.savefig("lab01")
