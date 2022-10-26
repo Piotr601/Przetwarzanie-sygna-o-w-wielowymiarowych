@@ -23,28 +23,32 @@ def monochrome(raw_image, monochrome_transform=[1,1,1]):
     return mono_image
 
 # Przygotowanie przestrzeni
-fig, ax = plt.subplots(4, 2, figsize=(12,12))
+fig, ax = plt.subplots(3, 2, figsize=(12,12))
 
 # Wczytywanie obrazu
 raw_image = monochrome(chelsea())
 ax[0,0].imshow(raw_image, cmap='binary_r')
 
-
-
 lut_base = np.arange(0,L)
-gamma = 1.5
+gamma = 2
 
 lut_gamma = np.linspace(255, 0, L).astype(np.uint8)
 lut_gamma = (((lut_base/(L-1)) ** (1/gamma)) * (L-1)).astype(np.uint8)
 
 ax[0,1].scatter(lut_base[::8], lut_base[::8], c='black', marker ='x')
+
 gamma_image = lut_gamma[raw_image]     # raw_image musi byc calkowito liczbowe INT
-
-
 ax[1,1].scatter(lut_base[::8], lut_gamma[::8], c='black', marker ='x')
 ax[1,0].imshow(gamma_image, cmap='binary_r')
 
+gamma = 0.4
 
+lut_gamma = np.linspace(255, 0, L).astype(np.uint8)
+lut_gamma = (((lut_base/(L-1)) ** (1/gamma)) * (L-1)).astype(np.uint8)
+
+gamma_image = lut_gamma[raw_image]     # raw_image musi byc calkowito liczbowe INT
+ax[2,1].scatter(lut_base[::8], lut_gamma[::8], c='black', marker ='x')
+ax[2,0].imshow(gamma_image, cmap='binary_r')
 
 # Zapis do pliku
 plt.savefig('wyklad03b.png')
