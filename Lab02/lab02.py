@@ -83,4 +83,4 @@ print(np.round(iinter_img[0:15,0:15],1))
 #     return y, x
 
 plt.tight_layout()
-plt.savefig("lab02")
+plt.savefig("Lab02/lab02")

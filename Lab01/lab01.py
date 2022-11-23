@@ -68,4 +68,4 @@ ax[2,1].set_title("n=50")
 ax[2,2].set_title("n=1000")
 
 plt.tight_layout()
-plt.savefig("lab01")
+plt.savefig("Lab01/lab01")

@@ -3,7 +3,7 @@ from scipy import ndimage
 import matplotlib.pyplot as plt
 
 # Reading image 
-raw_image = plt.imread('vessel.jpeg')
+raw_image = plt.imread('Lab04/vessel.jpeg')
 raw_image = np.mean(raw_image[::, ::], 2)
 
 # Define objects
@@ -93,4 +93,4 @@ ax[2,3].imshow(m_cor4, cmap = 'binary_r')
 
 # Saving fig
 plt.tight_layout()
-plt.savefig('lab04.png')
+plt.savefig('Lab04/lab04.png')

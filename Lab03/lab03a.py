@@ -44,4 +44,4 @@ v1, d1 = hist(new_img)
 ax[1,2].plot(v1)
 
 # Saving fig
-plt.savefig('lab03a.png')
+plt.savefig('Lab03/lab03a.png')

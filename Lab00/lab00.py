@@ -36,5 +36,5 @@ ax[1,0].set_title('color')
 ax[1,1].set_title('negative')
 
 plt.tight_layout()
-plt.savefig("lab00")
+plt.savefig("Lab00/lab00")
 #print(color)

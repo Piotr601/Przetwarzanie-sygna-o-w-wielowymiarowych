@@ -92,4 +92,4 @@ ax[5,1].imshow(gamma3_img)
 histograms(gamma3_img, 5)
 
 # Saving fig
-plt.savefig('lab03.png')
+plt.savefig('Lab03/lab03.png')
